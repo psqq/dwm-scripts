@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ssh-agent dwm 1>>~/.dwm.log 2>>~/.dwm.error.log

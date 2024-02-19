@@ -1,5 +1,18 @@
 Скрипты для [https://github.com/psqq/dwm](https://github.com/psqq/dwm)
 
+# Установка
+
+```sh
+cd ~
+git clone https://github.com/psqq/dwm-scripts
+chmod +x ~/dwm-scripts/dwm-logs.sh
+chmod +x ~/dwm-scripts/startdwm
+chmod +x ~/dwm-scripts/set-random-wallpapers.sh
+
+```
+
+# Список скриптов
+
 * `check_wm.py`
   * Выводит имя текущего оконного менеджера
   * Зависимости: `wmctrl`

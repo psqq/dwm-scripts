@@ -25,6 +25,22 @@
 * `startdwm`
   * Скрипт для запуска `dwm`
   * Добавить в `.xinitrc`: `exec ~/dwm-scripts/startdwm`
+* `set-random-wallpapers.sh`
+  * Скрипт для установка случайного фона рабочего стола из папки с изображениями.
+  * Скрипт принимает 2 параметра: папки с изображениями для 1 и 2 монитора. Если монитор 1, то можно передать только один аргумент.
+  * Зависимости: `feh`
+
+Пример добавления `set-random-wallpapers.sh` в `cron` (например, можно установить `cronie`):
+
+Набираем `crontab -e` и вводим:
+
+```conf
+SHELL=/bin/bash
+MAILTO=
+
+*/15 * * * * env DISPLAY=:0 /home/USER_NAME/dwm-scripts/set-random-wallpapers.sh /abs/path/to/wallpapers/for/first/monitor /abs/path/to/wallpapers/for/second/monitor
+
+```
 
 # Строка состояния
 

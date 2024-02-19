@@ -4,7 +4,7 @@ import sys
 
 
 def get_kbdlayout():
-    stream = os.popen("setxkbmap -query | grep -oP 'layout:\s*\K([\w,]+)'")
+    stream = os.popen("setxkbmap -query | grep -oP 'layout:\\s*\\K([\\w,]+)'")
     output = stream.read()
     return output.strip()
 

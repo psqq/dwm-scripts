@@ -57,10 +57,10 @@ def loop(display):
 
 
 if __name__ == "__main__":
+    display = sys.argv[2] if 2 < len(sys.argv) else ""
     if sys.argv[1] == "render":
-        render()
+        render(display)
     elif sys.argv[1] == "loop":
-        display = sys.argv[2] if 2 < len(sys.argv) else ""
         loop(display)
     else:
         print("need command: render | loop")
